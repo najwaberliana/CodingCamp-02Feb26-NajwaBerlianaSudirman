@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To Do List</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>My To Do List</h1>
+      <p class="tagline">Apa yang mau diselesaikan hari ini? </p>
+    </div>
+
+    <form id="form-todo" class="form-add">
+      <div class="input-wrapper">
+        <input type="text" id="tugas" placeholder="Tulis tugasmu di sini..." autocomplete="off">
+        <div class="error" id="err-tugas">Jangan kosong dong...</div>
+      </div>
+
+      <div class="input-wrapper">
+        <input type="date" id="tanggal">
+        <div class="error" id="err-tanggal">Tanggalnya mana?</div>
+      </div>
+
+      <button type="submit" class="btn-add">
+        <span>+</span> Tambah
+      </button>
+    </form>
+
+    <div class="controls">
+      <div class="filter-group">
+        <label for="filter">Filter:</label>
+        <select id="filter">
+          <option value="semua">Semua</option>
+          <option value="belum">Belum Selesai</option>
+          <option value="selesai">Sudah Selesai</option>
+        </select>
+      </div>
+
+      <input type="text" id="cari" placeholder="Cari tugas...">
+    </div>
+
+    <ul id="daftar" class="task-list"></ul>
+
+    <div id="kosong" class="kosong">
+      Belum ada catatan nih... <br>Yuk mulai tambahin sekarang
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
